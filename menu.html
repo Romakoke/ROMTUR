@@ -1,0 +1,138 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>меню ROMNUR</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+        *, *:after, *:before {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --x: 0;
+            --y: 0;
+            --xp: 0;
+            --yp: 0;
+            --hue: calc(0 + (var(--xp) * 500));
+            --bg: hsl(0 0% 10%);
+            --size: 100px;
+            --glow: radial-gradient(50% 50% at center, hsl(var(--hue) 80% 85%), hsl(var(--hue) 80% 70%), transparent) 
+                    calc((var(--x) * 1px) - (var(--size) * 0.5)) 
+                    calc((var(--y) * 1px) - (var(--size) * 0.5)) 
+                    / var(--size) var(--size) no-repeat fixed;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow: hidden;
+            position: relative;
+            background-color: black;
+        }
+
+        .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            filter: brightness(0.5);
+        }
+
+        nav {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        button {
+            border-radius: 1rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 0.1ch;
+            background: var(--bg);
+            border: 4px solid transparent;
+            cursor: pointer;
+            background: linear-gradient(var(--bg), var(--bg)) padding-box, var(--glow), linear-gradient(rgb(239, 239, 239), rgb(235, 235, 235)) border-box;
+            position: relative;
+            padding: 1rem 2rem;
+        }
+
+        button::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            box-shadow: 0 1px hsl(0 0% 100% / 0.15) inset;
+            background: var(--bg);
+            z-index: 2;
+            border-radius: 1rem;
+        }
+
+        button span {
+            background: var(--glow), rgb(250, 250, 250);
+            background-clip: text;
+            color: transparent;
+            position: relative;
+            z-index: 2;
+        }
+
+        button::after {
+            content: "";
+            position: absolute;
+            inset: -4px;
+            filter: blur(50px);
+            border: 4px solid transparent;
+            background: var(--glow);
+            border-radius: 1rem;
+        }
+
+        nav a {
+            color: hsl(var(--hue) 80% 85%);
+            text-decoration: none;
+            padding: 0.5em 1em;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Video -->
+    <div class="background-video">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/24aBnYHku6w?si=fsbVHTO6uJOJE1JO&autoplay=1&mute=1&loop=1&playlist=24aBnYHku6w" frameborder="0" allow="autoplay; loop; muted" allowfullscreen></iframe>
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <button><span><a href="#">Басты бет</a></span></button>
+        <button><span><a href="el.html" id="showCarousel">Туристтік зоналар</a></span></button>
+        <button><span><a href="#cruises" id="">Мейрамханалар</a></span></button>
+        <button><span><a href="yuu.html" id="showflex-container">Қонақ үйлер</a></span></button>
+        <button><span><a href="otzv.html" id="showfffi">Отзывы</a></span></button>
+        <button><span><a href="#about">Компания туралы</a></span></button>
+    </nav>
+
+    <script>
+        const syncPointer = ({ x: pointerX, y: pointerY }) => {
+            const x = pointerX.toFixed(2);
+            const y = pointerY.toFixed(2);
+            const xp = (pointerX / window.innerWidth).toFixed(2);
+            const yp = (pointerY / window.innerHeight).toFixed(2);
+            document.documentElement.style.setProperty('--x', x);
+            document.documentElement.style.setProperty('--xp', xp);
+            document.documentElement.style.setProperty('--y', y);
+            document.documentElement.style.setProperty('--yp', yp);
+        }
+        document.body.addEventListener('pointermove', syncPointer);
+    </script>
+</body>
+</html>

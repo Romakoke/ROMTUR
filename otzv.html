@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>РОМНҰР</title>
+  <style>
+    /* Басты стильдер */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-image: url('https://i.gifer.com/3Eqa.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Тақырып және логотип */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px 20px;
+}
+
+header .logo img {
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+}
+
+header .logo a {
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+.nav li a:hover {
+  color: #ffd700;
+}
+
+/* Контент-бөлімдер */
+.container {
+  text-align: center;
+  color: #fff;
+  padding: 60px 0;
+  font-size: 2em;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.content-section {
+  display: none;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  color: #333;
+}
+
+/* Жолдасу бөлімі */
+.contact {
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: #ffd700;
+}
+
+.contact-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.contact-input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.button {
+  padding: 12px 24px;
+  background-color: #ffd700;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #ffdf00;
+}
+ .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+  .nav li:hover .dropdown-content {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="fffi">
+    <div class="logo">
+      <img src="file:///C:/Users/turga/Downloads/DALL%C2%B7E%202024-10-22%2016.01.11%20-%20A%20modern,%20sleek%20logo%20for%20a%20website%20called%20'%D0%A0%D0%9E%D0%9C%D0%9D%D2%B0%D0%A0'%20with%20an%20emphasis%20on%20the%20letters%20'%D0%A0'%20and%20'%D0%9D'.%20The%20design%20should%20include%20elements%20of%20coding,%20such%20as%20.webp" alt="ROMNUR Logo">
+      <a href="#">ROMNUR</a>
+    </div>
+    <ul class="nav">
+      <li><a href="#">Ana sayfa</a></li>
+      <li>
+        <a href="#">programlama dilleri</a>
+        <div class="dropdown-content">
+          <a href="#" onclick="showContent('python-content')">Python</a>
+          <a href="#" onclick="showContent('cpp-content')">C++</a>
+          <a href="#" onclick="showContent('html-content')">HTML</a>
+        </div>
+      </li>
+      <li><a href="#">site_hakkinda</a></li>
+      <li><a href="#">temas_etmek</a></li>
+      <li>
+        <a href="#">Compiler</a>
+        <div class="dropdown-content">
+          <a href="https://www.javatpoint.com/compiler/python" target="_blank">Python</a>
+          <a href="https://www.javatpoint.com/cpp-interview-questions" target="_blank">C++</a>
+          <a href="https://www.javatpoint.com/compiler/html" target="_blank">HTML</a>
+        </div>
+      </li>
+    </ul>
+  </header>
+
+  <div class="container">
+    <h1>Hoş geldiniz ROMNUR</h1>
+  </div>
+
+  <!-- Hidden Content Sections -->
+  <div id="python-content" class="content-section">
+    <h2>Python оқулығы</h2>
+    <p>Python оқулығының толық мәтіні осында беріледі Python оқулығы | Python бағдарламалау тілі
+Python - Java және C++ сияқты тілдермен салыстырғанда бірнеше бірегей мүмкіндіктер мен артықшылықтарды ұсынатын кеңінен қолданылатын бағдарламалау тілі . Біздің Python оқу құралы орнату , шартты мәлімдемелер , циклдар , кірістірілген деректер құрылымдары , нысанға бағытталған бағдарламалау , генераторлар , ерекше жағдайларды өңдеу , Python RegEx және басқа да көптеген ұғымдардан бастап Python негіздері мен кеңейтілген тұжырымдамаларын мұқият түсіндіреді . Бұл оқу құралы жаңадан бастаушылар мен жұмыс істейтін кәсіпқойларға арналған.
+
+1980 жылдардың соңында Гвидо ван Россум Python тілін дамытуды армандады. Python 0.9.0 бірінші нұсқасы 1991 жылы шығарылды . Шығарылғаннан бері Python танымал бола бастады. Есептерге сәйкес, Python технология саласындағы жоғары талаптарға байланысты әзірлеушілер арасында ең танымал бағдарламалау тілі болып табылады.
+
+Python дегеніміз не
+Python – процедуралық, объектіге бағытталған және функционалдық бағдарламалауды қолдайтын жалпы мақсаттағы, динамикалық терілген, жоғары деңгейлі, құрастырылған және түсіндірілетін, қоқыс жинайтын және таза объектіге бағытталған бағдарламалау тілі.
+
+Python мүмкіндіктері:
+Пайдалануға және оқуға оңай - Python синтаксисі түсінікті және оқуға оңай, бұл оны жаңадан бастағандар үшін де, тәжірибелі бағдарламашылар үшін де тамаша тіл етеді. Бұл қарапайымдылық тезірек дамуға алып келеді және қателер ықтималдығын азайтады.
+Динамикалық түрде терілген - айнымалылардың деректер түрлері орындалу уақытында анықталады. Кодтарды жазу кезінде айнымалының деректер түрін көрсетудің қажеті жоқ.
+Жоғары деңгей - Жоғары деңгейлі тіл адам оқи алатын кодты білдіреді.
+Құрастырылған және интерпретацияланған - Python коды алдымен байт кодқа жинақталады, содан кейін жол бойынша интерпретацияланады. Python-ды жүйелік формада жүктеп алған кезде, біз Python-ның CPython деп аталатын әдепкі құралын жүктейміз. CPython орындалған және түсіндірілетін болып саналады.
+Жиналған қоқыс - жадты бөлу және бөлу автоматты түрде басқарылады. Бағдарламашыларға арнайы жадты басқарудың қажеті жоқ.
+Таза нысанға бағытталған - ол барлық нәрселерге, соның ішінде сандар мен жолдарға қатысты.
+Кросс-платформалық үйлесімділік - Python-ды Windows, macOS және әртүрлі Linux дистрибутивтеріне оңай орнатуға болады, бұл әзірлеушілерге әртүрлі операциялық жүйелерде жұмыс істейтін бағдарламалық құрал жасауға мүмкіндік береді.
+Rich Standard Library - Python веб-әзірлеу мен деректерді өңдеуден бастап машиналық оқыту мен желіге дейін әртүрлі тапсырмалар үшін пайдалануға дайын модульдер мен функцияларды қамтамасыз ететін бірнеше стандартты кітапханалармен бірге келеді .
+Open Source – Python – бастапқы коды ашық, ақысыз бағдарламалау тілі. Нәтижесінде ол бірнеше секторлар мен пәндерде қолданылады.
+Python-да көптеген веб-негізделген активтер , ашық бастапқы жобалар және белсенді қауымдастық бар . Тіл үйрену, жобаларда бірге жұмыс істеу және Python экожүйесіне үлес қосу әзірлеушілер үшін өте оңай.</p>
+  </div>
+
+  <div id="cpp-content" class="content-section">
+    <h2>C++ оқулығы</h2>
+    <p>C++ оқулығының толық мәтіні осында беріледі 
+C++ оқу құралы C++ тілінің негізгі және қосымша түсініктерін береді. Біздің C++ оқулығымыз жаңадан бастағандар мен кәсіпқойларға арналған.
+
+C++ – объектіге бағытталған программалау тілі. Бұл C бағдарламалауының кеңейтімі .
+
+Біздің C++ оқулығымыз C++ тілінің барлық тақырыптарын қамтиды, мысалы, бірінші мысал, басқару мәлімдемелері, нысандар мен сыныптар, мұра , конструктор , деструктор, бұл, статикалық, полиморфизм, абстракция, дерексіз класс, интерфейс, аттар кеңістігі, инкапсуляция, массивтер, жолдар, ерекше жағдайларды өңдеу, IO файлы және т.б.
+
+C++ дегеніміз не
+C++ – объектілі-бағытталған, процедуралық және жалпы бағдарламалауды қолдайтын жалпы мақсатты, регистрді ескеретін, еркін пішінді бағдарламалау тілі.
+
+C++ орта деңгейлі тіл болып табылады, өйткені ол жоғары және төмен деңгейлі тіл мүмкіндіктерін қамтиды.
+
+Объектіге бағытталған бағдарламалау (OOPs)
+C++ объектілі-бағытталған бағдарламалауды қолдайды, C++ тілінде қолданылатын объектіге бағытталған бағдарламалаудың төрт негізгі тірегі ( OOPs ) болып табылады:
+
+Мұрагерлік
+Полиморфизм
+Инкапсуляция
+Абстракция
+C++ стандартты кітапханалары
+Стандартты C++ бағдарламалау үш маңызды бөлікке бөлінеді:
+
+Негізгі кітапхана деректер түрлерін, айнымалылар мен литералдарды және т.б. қамтиды.
+Стандартты кітапхана жолдарды, файлдарды және т.б. басқаратын функциялар жиынтығын қамтиды.
+Стандартты үлгілер кітапханасы (STL) деректер құрылымын басқаратын әдістер жиынтығын қамтиды.
+C++ тілін қолдану
+C++ бағдарламалау тілінің көмегімен біз қорғалған және сенімді қолданбалардың әртүрлі түрлерін жасай аламыз:
+
+Терезе қолданбасы
+Клиент-сервер қолданбасы
+Құрылғы драйверлері
+Енгізілген микробағдарлама т.б
+C++ бағдарламасы
+Бұл оқулықта барлық C++ бағдарламалары C++ компиляторымен берілген, осылайша сіз C++ бағдарлама кодын оңай өзгерте аласыз.</p>
+  </div>
+
+  <div id="html-content" class="content-section">
+    <h2>HTML оқулығы</h2>
+    <p>
+HTML оқулығы немесе HTML 5 оқулығы HTML тілінің негізгі және қосымша түсініктерін береді. Біздің HTML оқулығымыз жаңадан бастағандар мен кәсіпқойлар үшін әзірленген. Біздің оқулықта әр тақырып кезең-кезеңімен берілген, сондықтан оны өте оңай меңгере аласыз. Егер сіз HTML тілін үйренуде жаңа болсаңыз, онда сіз HTML тілін қарапайым деңгейден кәсіби деңгейге дейін үйрене аласыз және HTML тілін CSS және JavaScript арқылы үйренгеннен кейін сіз өзіңіздің интерактивті және динамикалық веб-сайтыңызды жасай аласыз. Бірақ қазір біз HTML-ге осы оқулықта ғана тоқталамыз.
+
+HTML тілінің негізгі нүктелері төменде берілген:
+HTML HyperText Markup Language дегенді білдіреді.
+HTML веб-беттер мен веб-қосымшаларды жасау үшін қолданылады.
+HTML – интернетте кеңінен қолданылатын тіл.
+Статикалық веб-сайтты тек HTML арқылы жасай аламыз.
+Техникалық тұрғыдан алғанда, HTML бағдарламалау тілі емес, белгілеу тілі болып табылады.
+ <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;İlk web sayfam&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Merhaba, dünya!&lt;/h1&gt;
+    &lt;p&gt;Bu benim ilk web sayfam.&lt;/p&gt;
+   
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</p>
+  </div>
+
+  <!-- Contact Form Section -->
+  <section class="contact">
+    <h3 class="section-subtitle">хабарласыңыз</h3>
+    <h2 class="section-title">contact</h2>
+    <div class="contact-container">
+      <form action="#" class="contact-form" id="contact-form">
+        <div class="contact-group">
+          <input type="text" class="contact-input" name="user_name" placeholder="Enter your name" required autocomplete="off">
+          <input type="email" class="contact-input" name="user_email" placeholder="Enter your email" required autocomplete="off">
+        </div>
+        <textarea name="message" class="contact-input" placeholder="Enter your message" required></textarea>
+        <button type="submit" class="button">send message</button>
+      </form>
+    </div>
+  </section>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    // EmailJS setup
+    emailjs.init("MhFFGEpQ_8eb9iC9W");
+
+    // Toggle content visibility
+    function showContent(sectionId) {
+      document.querySelectorAll('.content-section').forEach(section => {
+        section.style.display = 'none';
+      });
+      document.getElementById(sectionId).style.display = 'block';
+    }
+
+    // Contact form submission
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      emailjs.sendForm('service_8somk05', 'template_on2hezb', this)
+        .then((response) => {
+          console.log('SUCCESS!', response.status, response.text);
+        }, (error) => {
+          console.log('FAILED...', error);
+        });
+    });
+  </script>
+</body>
+</html>
